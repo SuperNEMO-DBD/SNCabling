@@ -1,4 +1,4 @@
-# - CMake build script for sncablingquery application
+# - CMake build script for sncabling-config application
 
 #-----------------------------------------------------------------------
 # Copyright 2018 François Mauger <mauger@lpccaen.in2p3.fr>
@@ -18,15 +18,12 @@
 # You should have received a copy of the GNU General Public License
 # along with SNCabling. If not, see <http://www.gnu.org/licenses/>.
 #-----------------------------------------------------------------------
-message (STATUS "[info] Begin of 'source/sncablingquery/CMakeLists.txt'.")
-
 #-----------------------------------------------------------------------
 # Build utility script
 #
-message (STATUS "[info] Generating the 'sncablingquery' utility script...")
-configure_file(sncablingquery.in ${CMAKE_CURRENT_BINARY_DIR}/sncablingquery @ONLY)
+configure_file(sncabling-config.in ${CMAKE_CURRENT_BINARY_DIR}/sncabling-config @ONLY)
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sncablingquery
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sncabling-config
   DESTINATION ${CMAKE_INSTALL_BINDIR}
   PERMISSIONS
   OWNER_READ OWNER_EXECUTE
@@ -35,4 +32,3 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sncablingquery
   # COMPONENT Development
   )
 
-message (STATUS "[info] End of 'source/sncablingquery/CMakeLists.txt'.")
